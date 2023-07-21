@@ -45,12 +45,62 @@ def calculator():
 
 
 #Number to binary
+def num2bin():
+  number = int(input("Please enter your number: "))
+  if number > 255 or number < 0:
+    print("Error")
+    num2bin()
 
+  binary = ''
 
-def Num_2_Binary():
-  number = int(input("Please enter a number: "))
+  if number >= 128:
+    number = number - 128
+    binary = binary + '1'
+  else:
+    binary = binary + '0'
 
+  if number >= 64:
+    number = number - 64
+    binary = binary + '1'
+  else:
+    binary = binary + '0'
 
-#class checkNumber
-#if number > 255:
-# print("error")
+  if number >= 32:
+    number = number - 32
+    binary = binary + '1'
+  else:
+    binary = binary + '0'
+
+  if number >= 16:
+    number = number - 16
+    binary = binary + '1'
+  else:
+    binary = binary + '0'
+
+  binary = binary + ' '
+
+  if number >= 8:
+    number = number - 8
+    binary = binary + '1'
+  else:
+    binary = binary + '0'
+
+  if number >= 4:
+    number = number - 4
+    binary = binary + '1'
+  else:
+    binary = binary + '0'
+
+  if number >= 2:
+    number = number - 2
+    binary = binary + '1'
+  else:
+    binary = binary + '0'
+
+  if number >= 1:
+    number = number - 1
+    binary = binary + '1'
+  else:
+    binary = binary + '0'
+
+  print(binary)
