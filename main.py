@@ -104,3 +104,32 @@ def num2bin():
     binary = binary + '0'
 
   print(binary)
+
+
+#turns binary to number
+def binary_2_num():
+  binary = input("Please enter binary number: ")
+  binList = list(binary)
+  number = 0
+  if len(binList) != 8:
+    print("Error please enter in 8 digit format (00000000)")
+    binary_2_num()
+  else:
+    if binList[0] == '1':
+      number = number + 128
+    if binList[1] == '1':
+      number = number + 64
+    if binList[2] == '1':
+      number = number + 32
+    if binList[3] == '1':
+      number = number + 16
+    if binList[4] == '1':
+      number = number + 8
+    if binList[5] == '1':
+      number = number + 4
+    if binList[6] == '1':
+      number = number + 2
+    if binList[7] == '1':
+      number = number + 1
+
+  print("Your number is: ", number)
