@@ -3,6 +3,8 @@
 # 3) First_item()
 # 4) Calculator()
 # 5) Number_2_Binary()
+# 6) Binary_2_Num()
+# 7) reverse_words()
 
 
 #Minutes to seconds
@@ -107,13 +109,13 @@ def num2bin():
 
 
 #turns binary to number
-def binary_2_num():
+def Binary_2_Num():
   binary = input("Please enter binary number: ")
   binList = list(binary)
   number = 0
   if len(binList) != 8:
     print("Error please enter in 8 digit format (00000000)")
-    binary_2_num()
+    Binary_2_Num()
   else:
     if binList[0] == '1':
       number = number + 128
@@ -133,3 +135,10 @@ def binary_2_num():
       number = number + 1
 
   print("Your number is: ", number)
+
+
+#Reverses words
+
+def reverse_words():
+  word = input("Please enter a word: ")
+  print(''.join(reversed(word)))
